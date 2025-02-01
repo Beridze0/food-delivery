@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Sidebar.css'
 import { IoRestaurantOutline } from "react-icons/io5";
 import { GoHome } from "react-icons/go";
@@ -11,6 +11,23 @@ import { MdOutlinePowerSettingsNew } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
+
+    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('dark-mode')) || false)
+
+    const handleChangeTheme = () =>{
+        setDarkMode(prev => {
+            const newTheme = !prev
+            document.querySelector('body').setAttribute('data-theme', newTheme? "dark" : "light")
+            localStorage.setItem('dark-mode', JSON.stringify(newTheme))
+            return newTheme
+        })
+    }
+
+    useEffect(()=>{
+        const currentTheme = JSON.parse(localStorage.getItem('dark-mode'))
+        setDarkMode(currentTheme)
+    },[])
+
   return (
     <div className='sidebar-container'>
         <div className='sidebar'>
@@ -48,13 +65,17 @@ const Sidebar = () => {
             </div>
 
             <div className='sidebar-nav'>
-                <NavLink to={'/settings'} className={({isActive}) => isActive? "sidebar-nav-item active" 
+                <button className='sidebar-settings' onClick={handleChangeTheme}>
+                    <MdOutlinePowerSettingsNew size={20} />
+                    <p>Appearance: {darkMode? "Dark" : "Light"}</p>
+                </button>
+                <NavLink to={'/settings'} className={({isActive}) => isActive? "sidebar-settings active" 
                 :
-                 "sidebar-nav-item"}>
+                 "sidebar-settings"}>
                     <FiSettings size={20} />
                     <p>Settings</p>
                 </NavLink>
-                <NavLink to={'/logout'} className='sidebar-nav-item last'>
+                <NavLink to={'/logout'} className='sidebar-settings last'>
                     <MdLogout size={20} />
                     <p>Logout</p>
                 </NavLink>

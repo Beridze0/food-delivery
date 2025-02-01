@@ -8,6 +8,7 @@ body{
   margin: 0;
   font-family: "Poppins", serif;
   height: 100%;
+  background-color: var(--background-color);
 }
 
 #root{
@@ -16,4 +17,35 @@ body{
 
 .app{
   height: 100%;
+}
+
+
+:root {
+  --background-color: #ffffff; /* Light mode background */
+  --sidebar-bg: #f8f8f8; /* Light mode sidebar */
+  --sidebar-text: #000000;
+  --primary-text: #111111;
+  --secondary-text: #666666;
+  --card-bg: #ffffff;
+  --card-text: #000000;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+  --available-color: #0070f3; /* Next.js blue */
+  --not-available-color: #ff1a1a;
+  --border-color: #eaeaea;
+}
+
+[data-theme="dark"] {
+  --background-color: #000000; /* Next.js default dark mode */
+  --sidebar-bg: #0a0a0a;
+  --sidebar-text: #ffffff;
+  --primary-text: #ffffff;
+  --secondary-text: #888888;
+  --card-bg: #111111;
+  --card-text: #ffffff;
+  --button-bg: #f9f9f9; /* Next.js blue */
+  --button-text: #000000;
+  --available-color: #0070f3;
+  --not-available-color: #ff1a1a;
+  --border-color: #222222;
 }
