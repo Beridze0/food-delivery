@@ -8,6 +8,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { FiSettings } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 import { MdOutlinePowerSettingsNew } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -19,34 +20,44 @@ const Sidebar = () => {
                 </div>
 
                 <div className='sidebar-nav'>
-                    <div className='sidebar-nav-item'>
+                    <NavLink to={'/'} className={({isActive}) => isActive? "sidebar-nav-item active" 
+                    :
+                     "sidebar-nav-item"}>
                         <GoHome size={20} />
                         <p>Home</p>
-                    </div>
-                    <div className='sidebar-nav-item'>
+                    </NavLink>
+                    <NavLink to={'/menu'} className={({isActive}) => isActive? "sidebar-nav-item active" 
+                    :
+                     "sidebar-nav-item"}>
                         <BiFoodMenu size={20} />
                         <p>Menu</p>
-                    </div>
-                    <div className='sidebar-nav-item'>
+                    </NavLink>
+                    <NavLink to={'/favorites'} className={({isActive}) => isActive? "sidebar-nav-item active" 
+                    :
+                     "sidebar-nav-item"}>
                         <IoFastFoodOutline size={20} />
                         <p>Favorites</p>
-                    </div>
-                    <div className='sidebar-nav-item'>
+                    </NavLink>
+                    <NavLink to={'/cart'} className={({isActive}) => isActive? "sidebar-nav-item active" 
+                    :
+                     "sidebar-nav-item"}>
                         <RiShoppingCartLine size={20} />
                         <p>Cart</p>
-                    </div>
+                    </NavLink>
                 </div>
             </div>
 
             <div className='sidebar-nav'>
-                <div className='sidebar-nav-item'>
+                <NavLink to={'/settings'} className={({isActive}) => isActive? "sidebar-nav-item active" 
+                :
+                 "sidebar-nav-item"}>
                     <FiSettings size={20} />
                     <p>Settings</p>
-                </div>
-                <div className='sidebar-nav-item'>
+                </NavLink>
+                <NavLink to={'/logout'} className='sidebar-nav-item last'>
                     <MdLogout size={20} />
                     <p>Logout</p>
-                </div>
+                </NavLink>
             </div>    
         </div>
     </div>
