@@ -1,0 +1,41 @@
+.header-container{
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-user{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1rem;
+    background-color: var(--card-bg);
+    cursor: pointer;
+}
+
+.header p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.header-profile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-date{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}

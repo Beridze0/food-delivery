@@ -25,6 +25,7 @@ const Sidebar = () => {
 
     useEffect(()=>{
         const currentTheme = JSON.parse(localStorage.getItem('dark-mode'))
+        document.querySelector('body').setAttribute('data-theme', currentTheme? "dark" : "light")
         setDarkMode(currentTheme)
     },[])
 
@@ -34,6 +35,7 @@ const Sidebar = () => {
             <div className='sidebar-top'>
                 <div className='logo'>
                     <IoRestaurantOutline size={35} />
+                    <h1>Food Delivery</h1>
                 </div>
 
                 <div className='sidebar-nav'>
