@@ -5,7 +5,6 @@ import FoodCard from '../../FoodCard/FoodCard'
 const FoodGallery = () => {
   return (
     <div className='food-gallery-container'>
-        <div className='food-gallery'>
             <FoodCard />
             <FoodCard />
             <FoodCard />
@@ -14,7 +13,9 @@ const FoodGallery = () => {
             <FoodCard />
             <FoodCard />
             <FoodCard />
-        </div>
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
     </div>
   )
 }
