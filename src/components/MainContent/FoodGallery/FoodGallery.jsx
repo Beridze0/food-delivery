@@ -7,6 +7,9 @@ const FoodGallery = () => {
     <div className='food-gallery-container'>
         <div className='food-gallery'>
             <FoodCard />
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
         </div>
     </div>
   )

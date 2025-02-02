@@ -1,0 +1,48 @@
+.order-items{
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ordered-food{
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    gap: 1rem;
+}
+
+.ordered-food-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ordered-food-details p{
+    font-size: 0.9rem;
+}
+
+.ordered-food-price{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordered-food-edit{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ordered-food-img-container{
+    width: 140px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.ordered-food-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
