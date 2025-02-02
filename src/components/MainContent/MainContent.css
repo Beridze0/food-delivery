@@ -1,4 +1,13 @@
+.main-content-container{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.main-content{
+    height: 100%;
+}
 
 .menu-order{
     display: flex;
+    height: 100%;
 }

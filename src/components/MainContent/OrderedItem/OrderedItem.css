@@ -11,6 +11,18 @@
     padding: 0.4rem 0.7rem;
     gap: 1rem;
 }
+.ordered-food-img-container{
+    width: 140px;
+    height: 100px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.ordered-food-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
 
 .ordered-food-details{
     display: flex;
@@ -20,6 +32,11 @@
 
 .ordered-food-details p{
     font-size: 0.9rem;
+}
+
+.ordered-food-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .ordered-food-price{
@@ -35,14 +52,7 @@
     gap: 1rem;
 }
 
-.ordered-food-img-container{
-    width: 140px;
-    height: 100px;
-    flex-shrink: 0;
-}
-
-.ordered-food-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
+.order-edit, .order-delete{
+    font-size: 1.05rem;
+    cursor: pointer;
 }

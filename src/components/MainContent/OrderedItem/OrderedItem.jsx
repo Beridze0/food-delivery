@@ -1,6 +1,8 @@
 import React from 'react'
 import './OrderedItem.css'
 import food from '../../../assets/food.jpg'
+import { FiEdit3 } from "react-icons/fi";
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 const OrderedItem = () => {
   return (
@@ -17,8 +19,8 @@ const OrderedItem = () => {
                         <div className='ordered-food-price'>
                             <p>$13.00</p>
                             <div className='ordered-food-edit'>
-                                <p>edit</p>
-                                <p>del</p>
+                                <FiEdit3 className='order-edit' />
+                                <RiDeleteBin5Line className='order-delete' />
                             </div>
                         </div>
                     </div>

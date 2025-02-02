@@ -1,5 +1,8 @@
+.food-gallery-container{
+    flex-shrink: 0;
+}
 .food-gallery{
-    padding: 1rem;
+    padding-inline: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;

@@ -21,9 +21,11 @@ body{
   display: flex;
 }
 
-.main-content{
+.app-main-content{
   width: 100%;
+  height: 100%;
 }
+
 
 :root {
   --background-color: #ffffff; /* Light mode background */

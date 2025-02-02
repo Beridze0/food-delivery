@@ -10,6 +10,10 @@ const FoodGallery = () => {
             <FoodCard />
             <FoodCard />
             <FoodCard />
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
+            <FoodCard />
         </div>
     </div>
   )
