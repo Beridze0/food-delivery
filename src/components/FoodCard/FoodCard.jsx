@@ -1,16 +1,19 @@
 import React from 'react'
 import './FoodCard.css'
-import food from '../../assets/food.jpg'
 
-const FoodCard = () => {
+const FoodCard = ({mealObj}) => {
+
+    console.log(mealObj);
+    
+
   return (
     <div className='food-card-container'>
         <div className='food-card'>
             <div className='food-img-container'>
-                <img src={food} alt="food image" className='food-img' />
+                <img src={mealObj.strMealThumb} alt="food image" className='food-img' />
             </div>
             <div className='food-info'>
-                <p>Mushroom</p>
+                <p>{mealObj.strMeal.slice(0, 20)}...</p>
                 <p>$13.00</p>
             </div>
             <div className='add-to-cart'>
