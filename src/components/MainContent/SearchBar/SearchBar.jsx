@@ -7,6 +7,7 @@ const SearchBar = () => {
     <div className='search-bar-container'>
         <div className='search-bar'>
             <div className='categories'>
+                <p>All</p>
                 <p>Beef</p>
                 <p>Chicken</p>
                 <p>Dessert</p>

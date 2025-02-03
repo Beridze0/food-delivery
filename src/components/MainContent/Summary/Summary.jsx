@@ -8,7 +8,7 @@ const Summary = () => {
         <div className='summary'>
 
             <div className='summary-title'>
-                <p>Order Sumamry</p>
+                <p>Order Summary</p>
             </div>
             <OrderedItem />
             <OrderedItem />
