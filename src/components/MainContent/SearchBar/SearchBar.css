@@ -16,16 +16,23 @@
     align-items: center;
 }
 
-.categories p{
+.categories button{
+    font-size: 0.9rem;
     margin: 0;
+    color: var(--primary-text);
     border: 1px solid var(--border-color);
-    padding: 0.2rem 0.7rem;
+    padding: 0.4rem 0.8rem;
     background-color: var(--card-bg);
     cursor: pointer;
     transition: 0.2s;
 }
 
-.categories p:hover{
+.categories button:hover{
+    border: 1px solid var(--border-color);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+}
+.categories button.category-active{
     background-color: var(--button-bg);
     color: var(--button-text);
 }
@@ -36,6 +43,7 @@
     width: 100%;
     justify-content: end;
 }
+
 
 .search{
     width: 40%;

@@ -5,6 +5,7 @@ import { RiSearch2Line } from "react-icons/ri";
 const SearchBar = ({getSearchInput}) => {
 
     const [inputValue, setInputValue] = useState('')
+    const [category, setCategory] = useState("random")
     
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -12,20 +13,55 @@ const SearchBar = ({getSearchInput}) => {
         setInputValue('')
     }
 
+console.log(category);
+
 
   return (
     <div className='search-bar-container'>
         <div className='search-bar'>
             <div className='categories'>
-                <p>Random</p>
-                <p>Beef</p>
-                <p>Chicken</p>
-                <p>Dessert</p>
-                <p>Lamb</p>
-                <p>Pasta</p>
-                <p>Pork</p>
-                <p>Seafood</p>
+                <button 
+                    onClick={() => setCategory("random")}
+                    className={category === "random" ? 'category-active' : ''}>
+                    Random
+                </button>
+                <button 
+                    onClick={() => setCategory("beef")}
+                    className={category === "beef" ? 'category-active' : ''}>
+                    Beef
+                </button>
+                <button 
+                    onClick={() => setCategory("chicken")}
+                    className={category === "chicken" ? 'category-active' : ''}>
+                    Chicken
+                </button>
+                <button 
+                    onClick={() => setCategory("dessert")}
+                    className={category === "dessert" ? 'category-active' : ''}>
+                    Dessert
+                </button>
+                <button 
+                    onClick={() => setCategory("lamb")}
+                    className={category === "lamb" ? 'category-active' : ''}>
+                    Lamb
+                </button>
+                <button 
+                    onClick={() => setCategory("pasta")}
+                    className={category === "pasta" ? 'category-active' : ''}>
+                    Pasta
+                </button>
+                <button 
+                    onClick={() => setCategory("pork")}
+                    className={category === "pork" ? 'category-active' : ''}>
+                    Pork
+                </button>
+                <button 
+                    onClick={() => setCategory("seafood")}
+                    className={category === "seafood" ? 'category-active' : ''}>
+                    Seafood
+                </button>
             </div>
+
             <div className='search-container'>
                 <form onSubmit={handleSubmit} className='search'>
                     <RiSearch2Line size={19} />
