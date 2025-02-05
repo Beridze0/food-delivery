@@ -16,8 +16,8 @@ const Summary = ({mealDetails}) => {
             </div>
 
             {
-                mealDetails.map(()=>(
-                    <OrderedItem mealDetails={mealDetails} />
+                mealDetails.map((item, i)=>(
+                    <OrderedItem key={i} mealDetails={item} />
                 ))
             }
             

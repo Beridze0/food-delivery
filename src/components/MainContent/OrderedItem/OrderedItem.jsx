@@ -5,6 +5,8 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 
 const OrderedItem = ({mealDetails}) => {
     
+    console.log(mealDetails);
+    
     
 
   return (
