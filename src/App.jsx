@@ -22,9 +22,11 @@ const App = () => {
 
 
   const getMealsDetails = (meal) =>{
-      setMealDetails(prev => (
-        [...prev, meal]
-      ))
+      setMealDetails(prev => {
+        localStorage.setItem('ordered-meal', JSON.stringify([...prev, meal]))
+        return [...prev, meal]
+      })
+
   }
   
   

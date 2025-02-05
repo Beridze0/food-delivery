@@ -4,7 +4,6 @@ import OrderedItem from '../OrderedItem/OrderedItem'
 
 const Summary = ({mealDetails}) => {
 
-    console.log(mealDetails);
     
 
   return (
