@@ -2,7 +2,11 @@ import React from 'react'
 import './Summary.css'
 import OrderedItem from '../OrderedItem/OrderedItem'
 
-const Summary = () => {
+const Summary = ({mealDetails}) => {
+
+    console.log(mealDetails);
+    
+
   return (
     <div className='sumamry-container'>
         <div className='summary'>
@@ -10,9 +14,12 @@ const Summary = () => {
             <div className='summary-title'>
                 <p>Order Summary</p>
             </div>
-            <OrderedItem />
-            <OrderedItem />
-            <OrderedItem />
+
+            {
+                mealDetails.map(()=>(
+                    <OrderedItem mealDetails={mealDetails} />
+                ))
+            }
             
 
             <div className='payment'>

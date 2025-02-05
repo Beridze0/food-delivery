@@ -1,20 +1,22 @@
 import React from 'react'
 import './OrderedItem.css'
-import food from '../../../assets/food.jpg'
 import { FiEdit3 } from "react-icons/fi";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
-const OrderedItem = () => {
+const OrderedItem = ({mealDetails}) => {
+    
+    
+
   return (
     <div className='order-items'>
                 <div className='ordered-food'>
                     <div className='ordered-food-img-container'>
-                        <img src={food} alt="" className='ordered-food-img' />
+                        <img src={mealDetails?.strMealThumb} className='ordered-food-img' />
                     </div>
                     
                     <div className='ordered-food-details'>
                         <div className='ordered-food-title'>
-                            <p>Mushroom (1)</p>
+                            <p>{mealDetails?.strMeal}</p>
                         </div>
                         <div className='ordered-food-price'>
                             <p>$13.00</p>

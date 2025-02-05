@@ -11,7 +11,7 @@ const App = () => {
 
   const [searchInput, setSearchInput] = useState('')
   const [categoryValue, setCategoryValue] = useState()
-  const [mealDetails, setMealDetails] = useState()
+  const [mealDetails, setMealDetails] = useState([])
 
   const mealsData = useMealsFetch(searchInput, categoryValue, generateRandomLetter)
 
@@ -22,7 +22,9 @@ const App = () => {
 
 
   const getMealsDetails = (meal) =>{
-      setMealDetails(meal)
+      setMealDetails(prev => (
+        [...prev, meal]
+      ))
   }
   
   

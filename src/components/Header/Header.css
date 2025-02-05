@@ -33,9 +33,17 @@
     margin-right: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.7rem;
     padding: 0.6rem 1rem;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     cursor: pointer;
+    font-variant-numeric: tabular-nums;
+    min-width: 217px;
+}
+
+.header-date span{
+    font-variant-numeric: tabular-nums;
+    min-width: 160px;
 }

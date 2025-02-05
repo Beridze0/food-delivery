@@ -18,6 +18,10 @@
 }
 
 .food-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     width: 220px;
     height: 170px;
 }
@@ -25,6 +29,7 @@
 .food-img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 0.5rem;
     border: 1px solid var(--border-color);
 }
