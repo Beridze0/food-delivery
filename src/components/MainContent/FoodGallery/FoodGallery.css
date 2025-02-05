@@ -5,10 +5,28 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem 0;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     height: 100%;
     padding-inline: 1rem;
 }
 
-.food-gallery-container::-webkit-scrollbar{
-    display: none;
-}
+.food-gallery-container::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer;
+  }
+  
+  /* Track */
+  .food-gallery-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  .food-gallery-container::-webkit-scrollbar-thumb {
+    background: #888; 
+    cursor: pointer;
+  }
+  
+  /* Handle on hover */
+  .food-gallery-container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

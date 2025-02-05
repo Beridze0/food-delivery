@@ -9,13 +9,17 @@ const SearchBar = ({getSearchAndCategory}) => {
     
     const handleSubmit = (e) =>{
         e.preventDefault()
-        getSearchAndCategory(inputValue)
+        if (inputValue.trim() !== "") {
+            getSearchAndCategory(inputValue.trim())
+          }
         setInputValue('')
     }
 
     const handleCategory = (categoryValue) =>{
         getSearchAndCategory(categoryValue)
     }
+
+   
 
 
 
