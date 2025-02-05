@@ -2,18 +2,21 @@ import React, { useState } from 'react'
 import './SearchBar.css'
 import { RiSearch2Line } from "react-icons/ri";
 
-const SearchBar = ({getSearchInput}) => {
+const SearchBar = ({getSearchAndCategory}) => {
 
     const [inputValue, setInputValue] = useState('')
-    const [category, setCategory] = useState("random")
+    const [category, setCategory] = useState("")
     
     const handleSubmit = (e) =>{
         e.preventDefault()
-        getSearchInput(inputValue)
+        getSearchAndCategory(inputValue)
         setInputValue('')
     }
 
-console.log(category);
+    const handleCategory = (categoryValue) =>{
+        getSearchAndCategory(categoryValue)
+    }
+
 
 
   return (
@@ -21,42 +24,66 @@ console.log(category);
         <div className='search-bar'>
             <div className='categories'>
                 <button 
-                    onClick={() => setCategory("random")}
-                    className={category === "random" ? 'category-active' : ''}>
+                    onClick={() => {
+                        setCategory("random")
+                        handleCategory("")
+                    }}
+                    className={category === "" ? 'category-active' : ''}>
                     Random
                 </button>
                 <button 
-                    onClick={() => setCategory("beef")}
+                    onClick={() => {
+                        setCategory("beef")
+                        handleCategory("beef")
+                    }}
                     className={category === "beef" ? 'category-active' : ''}>
                     Beef
                 </button>
                 <button 
-                    onClick={() => setCategory("chicken")}
+                    onClick={() => {
+                        setCategory("chicken")
+                        handleCategory("chicken")
+                    }}
                     className={category === "chicken" ? 'category-active' : ''}>
                     Chicken
                 </button>
                 <button 
-                    onClick={() => setCategory("dessert")}
-                    className={category === "dessert" ? 'category-active' : ''}>
-                    Dessert
+                    onClick={() => {
+                        setCategory("vegetarian")
+                        handleCategory("vegetarian")
+                    }}
+                    className={category === "vegetarian" ? 'category-active' : ''}>
+                    Vegetarian
                 </button>
                 <button 
-                    onClick={() => setCategory("lamb")}
+                    onClick={() => {
+                        setCategory("lamb")
+                        handleCategory("lamb")
+                    }}
                     className={category === "lamb" ? 'category-active' : ''}>
                     Lamb
                 </button>
                 <button 
-                    onClick={() => setCategory("pasta")}
+                    onClick={() => {
+                        setCategory("pasta")
+                        handleCategory("pasta")
+                    }}
                     className={category === "pasta" ? 'category-active' : ''}>
                     Pasta
                 </button>
                 <button 
-                    onClick={() => setCategory("pork")}
+                    onClick={() => {
+                        setCategory("pork")
+                        handleCategory("pork")
+                    }}
                     className={category === "pork" ? 'category-active' : ''}>
                     Pork
                 </button>
                 <button 
-                    onClick={() => setCategory("seafood")}
+                    onClick={() => {
+                        setCategory("seafood")
+                        handleCategory("seafood")
+                    }}
                     className={category === "seafood" ? 'category-active' : ''}>
                     Seafood
                 </button>

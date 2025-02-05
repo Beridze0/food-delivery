@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const useMealsFetch = (searchInput, generateRandomLetter) => {
+const useMealsFetch = (searchInput, categoryValue, generateRandomLetter) => {
   const [mealsData, setMealsData] = useState()
 
   useEffect(() => {
@@ -10,7 +10,13 @@ const useMealsFetch = (searchInput, generateRandomLetter) => {
           .then((res) => res.json())
           .then((data) => setMealsData(data.meals))
           .catch((error) => console.error('Error fetching data:', error))
-      } else {
+      } else if(categoryValue){
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${categoryValue}`)
+          .then((res) => res.json())
+          .then((data) => setMealsData(data.meals))
+          .catch((error) => console.error('Error fetching data:', error))
+      }
+      else{
         const letters = generateRandomLetter()
         try {
           const requests = letters.map((letter) =>

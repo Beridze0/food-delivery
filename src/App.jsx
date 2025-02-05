@@ -10,12 +10,16 @@ import useMealsFetch from './hooks/useMealsFetch'
 const App = () => {
 
   const [searchInput, setSearchInput] = useState('')
+  const [categoryValue, setCategoryValue] = useState()
 
-  const mealsData = useMealsFetch(searchInput, generateRandomLetter)
+  const mealsData = useMealsFetch(searchInput, categoryValue, generateRandomLetter)
 
-  const getSearchInput = (inputValue) =>{
-    setSearchInput(inputValue)
+  const getSearchAndCategory = (value) =>{
+    setSearchInput(value)
+    setCategoryValue(value)
   }
+
+  
 
   
   return (
@@ -24,7 +28,7 @@ const App = () => {
       <div className='app-main-content'>
         
           <Header />
-          <SearchBar getSearchInput={getSearchInput} />
+          <SearchBar getSearchAndCategory={getSearchAndCategory} />
         <Routes>
           <Route path="/" element={<MainContent mealsData={mealsData} />} />
         </Routes>
