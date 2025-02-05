@@ -14,18 +14,15 @@
     width: 5px;
   }
   
-  /* Track */
   .food-gallery-container::-webkit-scrollbar-track {
     background: var(--border-color); 
   }
    
-  /* Handle */
   .food-gallery-container::-webkit-scrollbar-thumb {
     background: var(--secondary-text); 
     cursor: pointer;
   }
   
-  /* Handle on hover */
   .food-gallery-container::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }

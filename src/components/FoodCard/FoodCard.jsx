@@ -2,9 +2,12 @@ import React from 'react'
 import './FoodCard.css'
 import { Link } from 'react-router-dom';
 
-const FoodCard = ({mealObj}) => {
+const FoodCard = ({mealObj, getMealsDetails}) => {
 
     
+    const handleClick = () =>{
+        getMealsDetails(mealObj)
+    }
 
   return (
     <div className='food-card-container'>
@@ -18,7 +21,9 @@ const FoodCard = ({mealObj}) => {
                 </div>
             </Link>
             <div className='add-to-cart'>
-                <button className='add-to-cart-btn'>
+                <button className='add-to-cart-btn'
+                        onClick={() => handleClick()}
+                        >
                     Add to Cart
                 </button>
             </div>

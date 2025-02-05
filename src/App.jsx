@@ -11,6 +11,7 @@ const App = () => {
 
   const [searchInput, setSearchInput] = useState('')
   const [categoryValue, setCategoryValue] = useState()
+  const [mealDetails, setMealDetails] = useState()
 
   const mealsData = useMealsFetch(searchInput, categoryValue, generateRandomLetter)
 
@@ -19,6 +20,11 @@ const App = () => {
     setCategoryValue(value)
   }
 
+
+  const getMealsDetails = (meal) =>{
+      setMealDetails(meal)
+  }
+  
   
 
   
@@ -30,7 +36,14 @@ const App = () => {
           <Header />
           <SearchBar getSearchAndCategory={getSearchAndCategory} />
         <Routes>
-          <Route path="/" element={<MainContent mealsData={mealsData} />} />
+          <Route
+            path="/"
+            element={<MainContent
+                      mealsData={mealsData}
+                      getMealsDetails={getMealsDetails} 
+                      mealDetails={mealDetails}
+                      />} 
+          />
         </Routes>
       </div>
     </div>
