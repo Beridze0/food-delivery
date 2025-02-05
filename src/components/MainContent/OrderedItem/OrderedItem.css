@@ -1,6 +1,7 @@
 .order-items{
     padding-inline: 1rem;
     padding-bottom: 1rem;
+    position: relative;
 }
 
 .ordered-food{
@@ -34,9 +35,20 @@
     font-size: 0.9rem;
 }
 
-.ordered-food-title:hover{
+.ordered-food-title p{
+    margin-block: 0.3rem;
+}
+
+
+.ordered-food-title p:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+.ordered-food-title p:last-child {
+    margin: 0;
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 0.7rem;
 }
 
 .ordered-food-price{
@@ -50,6 +62,46 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.edit-window{
+    position: absolute;
+    top: 80px;
+    left: 75px;
+    width: 230px;
+    height: 150px;
+    background-color: var(--card-bg);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.quantity-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.quantity-btn button{
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quantity-btn button:hover{
+    background-color: var(--button-hover-bg);
+    color: var(--button-text);
+}
+
+.edit-window p{
+    margin: 0;
 }
 
 .order-edit, .order-delete{
