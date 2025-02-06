@@ -26,10 +26,15 @@ const App = () => {
   const getMealsDetails = (meal) => {
     setMealDetails(prev => {
       const prevMeal = [...prev]
-      console.log(meal);
       
-      localStorage.setItem('meal-details', JSON.stringify([...prevMeal, meal]))
-      return [...prevMeal, meal]
+      
+      if(prevMeal.some((meals) => meals.idMeal === meal.idMeal)){
+        alert("Already in a cart")
+        return [...prev]
+      } else {
+        localStorage.setItem('meal-details', JSON.stringify([...prevMeal, meal]))
+        return [...prevMeal, meal]
+      }
     })
   };
 
